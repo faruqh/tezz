@@ -1,0 +1,12 @@
+<% @farms.each do |farm| %>
+<h2><%= link_to farm.title, farm  %></h2>
+<p><%= farm.content %></p>
+<p>
+	<%= link_to "Edit", edit_farm_path(farm) %>  |
+    <%= link_to "Delete", farm, data: { confirm: "You sure?" }, :method => :delete %>
+</p>
+
+
+<hr />
+<%   end   %>
+<p><%= link_to "Add a New Post", new_farm_path %></p>
